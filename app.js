@@ -3,6 +3,9 @@ var bodyParser    = require('body-parser');
 var request       = require('request');
 var dotenv        = require('dotenv');
 var SpotifyWebApi = require('spotify-web-api-node');
+var raven         = require('raven');
+var client = new raven.Client('http://6bc59e3886d245ad966baca09c6459ee:e71c3d3f940c431994eb9550dd49799f@sentry.dasapp.co/3');
+client.patchGlobal();
 
 dotenv.load();
 
